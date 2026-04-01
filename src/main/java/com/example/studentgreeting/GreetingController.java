@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class GreetingController {
-  @GetMapping(value = "/", produces = MediaType.TEXT_HTML_VALUE)
-  public String greeting() { return "<html><body><h1>Hello, System!</h1></body></html>"; }
+  @GetMapping("/")
+  public String greeting(Model model) {
+    model.addAttribute("message", "Hello, Student!");
+    return "index";
+  }
 }

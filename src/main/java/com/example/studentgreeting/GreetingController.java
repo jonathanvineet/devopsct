@@ -1,4 +1,4 @@
-package com.example.studentgreeting;
+package com.example.devopsct;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

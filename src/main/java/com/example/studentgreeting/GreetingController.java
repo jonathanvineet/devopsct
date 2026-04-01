@@ -1,11 +1,14 @@
 package com.example.studentgreeting;
 
-import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class GreetingController {
-  @GetMapping(value = "/", produces = MediaType.TEXT_HTML_VALUE)
-  public String greeting() { return "<html><body><h1>Hello, Student!</h1></body></html>"; }
+  @GetMapping("/")
+  public String greeting(Model model) {
+    model.addAttribute("message", "Hello, Student!");
+    return "index";
+  }
 }

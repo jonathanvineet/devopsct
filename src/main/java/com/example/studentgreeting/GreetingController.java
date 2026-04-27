@@ -1,4 +1,4 @@
-package com.example.studentgreeting;
+package com.example.devopsct;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -6,14 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class GreetingController {
-<<<<<<< HEAD
   @GetMapping("/")
   public String greeting(Model model) {
     model.addAttribute("message", "Hello, Student!");
     return "index";
   }
-=======
-  @GetMapping(value = "/", produces = MediaType.TEXT_HTML_VALUE)
-  public String greeting() { return "<html><body><h1>Hello, System!</h1></body></html>"; }
->>>>>>> refs/remotes/origin/main
 }
